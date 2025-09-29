@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC:wght@300;400;700&family=Monoton&family=Noto+Sans+TC:wght@100..900&display=swap');
+    </style>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./nav.css">
+    <link rel="stylesheet" href="./button.css">
+    <link rel="stylesheet" href="./collection.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="flex">
+            <div class="header-left">
+                <div class="logo">
+                    <a href="./index.html">
+                        <picture class="header-logo">
+                            <img src="./img/henry_logo.png" alt="">
+                        </picture>
+                    </a>
+                </div>
+            </div>
+            <div class="header-middle"></div>
+            <div class="header-right">
+                <nav>
+                    <div class="menu-container menu-container-desk flex">
+                        <div class="menu-text">
+                            <a href="#about" data-nav="about">
+                                關於我
+                            </a>
+                        </div>
+                        <div class="menu-text">
+                            <a href="#collection" data-nav="collection">作品集</a>
+                        </div>
+                    </div>
+
+                    <div class="hamburger-menu menu-container-mobile">
+                        <div class="hamburger-lines">
+                            <span class="line line-1"></span>
+                            <span class="line line-2"></span>
+                            <span class="line line-3"></span>
+                        </div>
+                        <div class="notes">
+                            <div class="note note-1"></div>
+                            <div class="note note-2"></div>
+                            <div class="note note-3"></div>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="section-cover">
+            <div class="intro-cover"></div>
+        </section>
+
+        <section id="section-about">
+            <div class="content-type-block">
+                <div class="section-about">
+                    <div class="custom-container-mid">
+                        <div class="section-header">
+                            <h2 class="">關於我</h2>
+                            <div class="divider"></div>
+                        </div>
+                        <div class="about-text">
+                            畢業於致理科大，致力於後端開發，具備 php、Laravel、JavaScript、jQuery、Vue.js 及 API 串接資料庫的能力，擁有第三方服務整合經驗，曾實作 OAuth
+                            驗證、綠界金流支付與 Twilio 通訊串接，並能進行前後端整合開發。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section-collection">
+            <div class="content-type-block">
+                <div class="section-collection">
+                    <div class="custom-container-mid">
+                        <div class="section-header">
+                            <h2 class="">作品集</h2>
+                            <div class="divider"></div>
+                        </div>
+                        <div class="collection-container">
+                            <div class="collection-card">
+                                <div class="main-card">
+                                    <div class="card-content">
+                                        <div class="flex flex-column img-container">
+                                            <div class="card-img-container">
+                                                <img src="./img/shop-2.png" alt="">
+                                                <div class="card-img-overlay">
+                                                    <div class="card-img-overlay-text">
+                                                        使用 Laravel 與 Vue 3 建構的簡易商城系統，前台採用 Tailwind CSS 打造響應式版面，後台則整合
+                                                        Element Plus 元件庫，並實作商品管理、購物車與訂單流程等功能。
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-text-container">
+                                                <div class="card-text">
+                                                    <div>購物商城</div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="card-button">
+                                                    <button type="button" class="button button-25">
+                                                        <a target="_blank" href="https://itsmehenry.com/categories" >
+                                                            點擊前往
+                                                        </a>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main-card">
+                                    <div class="card-content">
+                                        <div class="flex flex-column img-container">
+                                            <div class="card-img-container">
+                                                <img src="./img/calendar-2.png" alt="">
+                                                <div class="card-img-overlay">
+                                                    <div class="card-img-overlay-text">
+                                                        使用php製作的月曆功能，提供多種操作方式：1.透過按鈕切換月份 2.以滑鼠滾輪上下滑動切換月份 3.查詢並跳轉至指定年月。
+                                                        同時，針對非本月日期、國定假日與特殊節日，進行額外的標示與樣式渲染。
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-text-container">
+                                                <div class="card-text">
+                                                    <div>日曆</div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="card-button">
+                                                    <button type="button" class="button button-25">
+                                                        <a target="_blank" href="https://calendar.itsmehenry.com/">
+                                                            點擊前往
+                                                        </a>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main-card">
+                                    <div class="card-content">
+                                        <div class="flex flex-column img-container">
+                                            <div class="card-img-container">
+                                                <img src="./img/todo-3.png" alt="">
+                                                <div class="card-img-overlay">
+                                                    <div class="card-img-overlay-text">
+                                                        使用Vue3 與 Pinia 開發的週視圖任務管理應用，支援 拖曳排序、優先級標記、本地儲存
+                                                        等功能。使用者能夠快速建立、複製與管理任務，即使重新整理頁面，任務資料也會透過 Pinia 持久化機制保存。
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card-text-container">
+                                                <div class="card-text">
+                                                    <div>待辦事項</div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="card-button">
+                                                    <button type="button" class="button button-25">
+                                                        <a target="_blank" href="https://teatimehr13.github.io/WeekTodoList/">
+                                                            點擊前往
+                                                        </a>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="nav-overlay">
+            <div class="menu-content">
+                <ul class="menu-items">
+                    <li class="menu-item" data-nav="about"><a href="#about">關於我</a></li>
+                    <li class="menu-item" data-nav="collection"><a href="#collection">作品集</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js.js"></script>
+</body>
+
+</html>

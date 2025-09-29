@@ -1,0 +1,265 @@
+ :root {
+     --primary: #1DB954;
+     --secondary: #121212;
+     --text: #f8f8f8;
+     --hover: #1ed760;
+     --transition-duration: 0.6s;
+     --menu-size: 40px;
+ }
+
+ .site-header {
+     padding-top: 0 !important;
+     padding-bottom: 0 !important;
+     background-color: rgba(0, 0, 0, 0);
+     width: 100%;
+     position: absolute;
+     top: 0;
+     box-shadow: none;
+     padding: 0;
+     padding-left: 40px;
+     box-sizing: border-box;
+     z-index: 100;
+ }
+
+ .site-header>div {
+     height: 100px;
+     min-height: 100px;
+ }
+
+ .header-logo img {
+     display: block;
+     height: 40px;
+ }
+
+ .site-header .header-left {
+     flex: 0 0 auto;
+
+ }
+
+ .site-header .header-middle {
+     flex: 1 1 auto;
+ }
+
+ .site-header .header-right {
+     flex: 0 0 auto;
+     display: flex;
+     align-items: center;
+     position: fixed;
+     right: 0;
+ }
+
+ .menu-container {
+     display: flex;
+     align-items: center;
+     gap: 20px;
+     padding-inline: 50px;
+     background: url('./img/16341251_v846-sasi-77\ \(1\).png') center / 105% 150% no-repeat;
+     padding-right: 50px;
+     padding-left: 50px;
+     min-height: 70px;
+ }
+
+ .menu-container div {
+     margin-inline-end: 20px;
+ }
+
+ .menu-container .menu-text {
+     font-size: 1.5rem;
+ }
+
+ .menu-container .menu-text:hover{
+    cursor: pointer;
+ }
+
+ .menu-container .menu-text > a {
+    text-decoration: none;
+    color: #000;
+ }
+
+ /* hamburger bar down below */
+ .menu-container-mobile {
+     display: none;
+ }
+
+ .hamburger-menu {
+     width: var(--menu-size);
+     height: var(--menu-size);
+     position: relative;
+     cursor: pointer;
+     z-index: 1000;
+ }
+
+ .hamburger-menu:hover .note {
+     transform: scale(1);
+ }
+
+ .hamburger-menu:hover .notes {
+     opacity: 1;
+ }
+
+ .hamburger-lines {
+     position: relative;
+     width: 100%;
+     height: 100%;
+     right: 15px;
+ }
+
+
+ .line {
+     position: absolute;
+     height: 2px;
+     width: 100%;
+     background: #000;
+     border-radius: 4px;
+     transition: all var(--transition-duration) ease;
+     transform-origin: center;
+     left: 0;
+ }
+
+ .line-1 {
+     top: 25%;
+     width: 70%;
+ }
+
+ .line-2 {
+     top: 50%;
+     transform: translateY(-50%);
+ }
+
+ .line-3 {
+     bottom: 25%;
+     width: 50%;
+ }
+
+ .nav-overlay {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 0;
+     background: rgba(18, 18, 18, 0.97);
+     z-index: 99;
+     overflow: hidden;
+     transition: height var(--transition-duration) cubic-bezier(0.77, 0, 0.175, 1);
+ }
+
+ .nav-overlay.open {
+     height: 100%;
+ }
+
+ .nav-overlay.open .menu-content {
+     opacity: 1;
+     transform: translateY(0);
+ }
+
+ .active .line {
+    background: white;
+ }
+
+ .active .line-1 {
+     top: 50%;
+     transform: translateY(-50%) rotate(45deg);
+     width: 100%;
+ }
+
+ .active .line-2 {
+     opacity: 0;
+ }
+
+ .active .line-3 {
+     bottom: 50%;
+     transform: translateY(50%) rotate(-45deg);
+     width: 100%;
+ }
+
+
+ .menu-items {
+     list-style: none;
+     text-align: center;
+     padding: 0;
+ }
+
+ .menu-item {
+     margin: 1.5rem 0;
+     font-size: 2rem;
+     font-weight: 700;
+     position: relative;
+     overflow: hidden;
+     cursor: pointer;
+ }
+
+ .menu-item a {
+     color: var(--text);
+     text-decoration: none;
+     display: inline-block;
+     position: relative;
+     transition: all 0.3s ease;
+ }
+
+ .menu-item a::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 0;
+     height: 3px;
+     background: var(--primary);
+     transition: width 0.3s ease;
+ }
+
+ .menu-item a:hover {
+     color: var(--primary);
+ }
+
+ .menu-item a:hover::after {
+     width: 100%;
+ }
+
+ .menu-content {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 100%;
+     opacity: 0;
+     transform: translateY(30px);
+     transition: all var(--transition-duration) ease;
+     transition-delay: 0.2s;
+ }
+
+
+ html:has(.nav-overlay.open),
+ body:has(.nav-overlay.open) {
+     overflow: hidden;
+     
+ }
+
+ @media (max-width:800px) {
+     .menu-container-desk {
+         display: none;
+     }
+
+     .menu-container-mobile {
+         display: block;
+     }
+
+ }
+
+ @media (max-width:600px) {
+     .menu-item {
+         font-size: 1.5rem;
+         margin: 1rem 0;
+     }
+
+ }
+
+ @media (min-width:800px) {
+     .nav-overlay.open {
+         height: 0%;
+     }
+
+     .nav-overlay.open .menu-content {
+         opacity: 0;
+     }
+ }
